@@ -2,8 +2,8 @@ from dataclasses import dataclass
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from infrastructure.database.repo.users import UserRepo
-from infrastructure.database.setup import create_engine
+from src.infrastructure.database.repo.users import UserRepo
+from src.infrastructure.database.setup import create_engine
 
 
 @dataclass
@@ -25,8 +25,8 @@ class RequestsRepo:
 
 
 if __name__ == "__main__":
-    from infrastructure.database.setup import create_session_pool
-    from tgbot.config import Config
+    from src.infrastructure.database.setup import create_session_pool
+    from src.tgbot import Config
 
     async def example_usage(config: Config):
         """

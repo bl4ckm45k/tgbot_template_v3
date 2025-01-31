@@ -3,7 +3,7 @@ from typing import Callable, Dict, Any, Awaitable
 from aiogram import BaseMiddleware
 from aiogram.types import Message
 
-from infrastructure.database.repo.requests import RequestsRepo
+from src.infrastructure.database.repo.requests import RequestsRepo
 
 
 class DatabaseMiddleware(BaseMiddleware):

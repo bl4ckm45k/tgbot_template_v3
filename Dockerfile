@@ -1,9 +1,9 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 WORKDIR /usr/src/app/bot
 
-COPY requirements.txt /usr/src/app/bot
+COPY ./requirements.txt ./
+COPY ./src ./
 
-RUN pip install -r /usr/src/app/bot/requirements.txt
-
-COPY . /usr/src/app/bot
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt

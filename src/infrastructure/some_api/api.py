@@ -1,4 +1,4 @@
-from infrastructure.some_api.base import BaseClient
+from src.infrastructure.some_api.base import BaseClient
 
 
 class MyApi(BaseClient):

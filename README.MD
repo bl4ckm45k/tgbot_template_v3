@@ -54,18 +54,20 @@ routers_list = [
 ```
 ### Як додати хендлери до нашого бота:
 Переходимо до файлу  `bot.py` та розпаковуємо наші хендлери:
+
 ```python
-from tgbot.handlers import routers_list
+from src.tgbot import routers_list
 
 ...
 
+
 async def main():
-   
-    ...
+   ...
 
-   dp.include_routers(*routers_list)
 
-    ...
+dp.include_routers(*routers_list)
+
+...
 
 
 ```

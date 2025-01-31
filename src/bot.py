@@ -6,10 +6,10 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.storage.redis import RedisStorage, DefaultKeyBuilder
 
-from tgbot.config import load_config, Config
-from tgbot.handlers import routers_list
-from tgbot.middlewares.config import ConfigMiddleware
-from tgbot.services import broadcaster
+from src.tgbot import load_config, Config
+from src.tgbot import routers_list
+from src.tgbot.middlewares.config import ConfigMiddleware
+from src.tgbot.services import broadcaster
 
 
 async def on_startup(bot: Bot, admin_ids: list[int]):
